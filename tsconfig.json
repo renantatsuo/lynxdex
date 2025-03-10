@@ -2,8 +2,8 @@
   "compilerOptions": {
     "jsx": "preserve",
 
-    "module": "node16",
-    "moduleResolution": "node16",
+    "module": "esnext",
+    "moduleResolution": "node",
 
     "strict": true,
     "isolatedModules": true,

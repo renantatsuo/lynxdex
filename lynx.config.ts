@@ -13,10 +13,4 @@ export default defineConfig({
     }),
     pluginReactLynx(),
   ],
-  output: {
-    distPath: {
-      root: "./ios/lynxdex",
-    },
-    cleanDistPath: false,
-  },
 });
