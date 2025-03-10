@@ -1,9 +1,16 @@
-import { root } from '@lynx-js/react'
+import { root } from "@lynx-js/react";
 
-import { App } from './App.js'
+import { MemoryRouter, Route, Routes } from "react-router";
+import { App } from "./App.js";
 
-root.render(<App />)
+root.render(
+  <MemoryRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+    </Routes>
+  </MemoryRouter>
+);
 
 if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
+  import.meta.webpackHot.accept();
 }
