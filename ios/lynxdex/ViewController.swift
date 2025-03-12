@@ -11,7 +11,8 @@ class ViewController: UIViewController {
 
         let globalProps: [String: Any] = [
             "safeAreaInsets": [
-                "top": safeAreaInsets?.top
+                "top": safeAreaInsets?.top,
+                "bottom": safeAreaInsets?.bottom
             ]
         ]
 
