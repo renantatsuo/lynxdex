@@ -11,7 +11,6 @@ export function App() {
   const [pokemonList, setPokemonList] = useState<any[]>([]);
   const [maxLength, setMaxLength] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setTheme(lynx.__globalProps.theme.toLocaleLowerCase() as Theme);

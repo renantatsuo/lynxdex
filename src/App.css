@@ -1,4 +1,4 @@
-page {
+:root {
   --identity-primary: #dc0a2d;
   --identity-secondary: #28aafd;
   --grayscale-dark: #1c1c1c;
@@ -7,24 +7,24 @@ page {
   --grayscale-background: #efefef;
   --grayscale-white: #ffffff;
   --grayscale-wireframe: #b7b7b7;
-  --pokémon-type-bug: #a7b723;
-  --pokémon-type-dark: #75574c;
-  --pokémon-type-dragon: #7037ff;
-  --pokémon-type-electric: #f9cf30;
-  --pokémon-type-fairy: #e69eac;
-  --pokémon-type-fighting: #c12239;
-  --pokémon-type-fire: #f57d31;
-  --pokémon-type-flying: #a891ec;
-  --pokémon-type-ghost: #70559b;
-  --pokémon-type-grass: #74cb48;
-  --pokémon-type-ground: #dec16b;
-  --pokémon-type-ice: #9ad6df;
-  --pokémon-type-normal: #aaa67f;
-  --pokémon-type-poison: #a43e9e;
-  --pokémon-type-psychic: #fb5584;
-  --pokémon-type-rock: #b69e31;
-  --pokémon-type-steel: #b7b9d0;
-  --pokémon-type-water: #6493eb;
+  --pokemon-type-bug: #a7b723;
+  --pokemon-type-dark: #75574c;
+  --pokemon-type-dragon: #7037ff;
+  --pokemon-type-electric: #f9cf30;
+  --pokemon-type-fairy: #e69eac;
+  --pokemon-type-fighting: #c12239;
+  --pokemon-type-fire: #f57d31;
+  --pokemon-type-flying: #a891ec;
+  --pokemon-type-ghost: #70559b;
+  --pokemon-type-grass: #74cb48;
+  --pokemon-type-ground: #dec16b;
+  --pokemon-type-ice: #9ad6df;
+  --pokemon-type-normal: #aaa67f;
+  --pokemon-type-poison: #a43e9e;
+  --pokemon-type-psychic: #fb5584;
+  --pokemon-type-rock: #b69e31;
+  --pokemon-type-steel: #b7b9d0;
+  --pokemon-type-water: #6493eb;
 }
 
 .app-light {

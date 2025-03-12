@@ -11,3 +11,9 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# ios
+ios/Pods
+ios/lynxdex/main.lynx.bundle
+lynxdex.xcworkspace
+xcuserdata/

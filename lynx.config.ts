@@ -1,7 +1,10 @@
-import { defineConfig } from "@lynx-js/rspeedy";
+import { defineConfig, type RsbuildPluginAPI } from "@lynx-js/rspeedy";
 
 import { pluginQRCode } from "@lynx-js/qrcode-rsbuild-plugin";
 import { pluginReactLynx } from "@lynx-js/react-rsbuild-plugin";
+
+import { copyFile } from "fs/promises";
+import path from "path";
 
 export default defineConfig({
   plugins: [
@@ -12,5 +15,16 @@ export default defineConfig({
       },
     }),
     pluginReactLynx(),
+    {
+      name: "move-bundle",
+      setup(api: RsbuildPluginAPI) {
+        api.onAfterBuild(() => {
+          copyFile(
+            path.join(api.context.distPath, "main.lynx.bundle"),
+            path.join(api.context.rootPath, "ios/lynxdex/main.lynx.bundle")
+          );
+        });
+      },
+    },
   ],
 });
