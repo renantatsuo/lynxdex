@@ -13,4 +13,12 @@ declare module "@lynx-js/types" {
   }
 }
 
+declare global {
+  namespace React {
+    interface InputHTMLAttributes {
+      bindinput: (event: any) => void;
+    }
+  }
+}
+
 export {};

@@ -71,6 +71,39 @@
   color: var(--grayscale-white);
 }
 
+.list-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px 16px 16px;
+
+  input {
+    flex: 1;
+    border-radius: 32px;
+    height: 40px;
+    padding: 8px 16px;
+    background-color: var(--grayscale-white);
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .sort-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--grayscale-white);
+  }
+
+  .sort-button image {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .pokemon-list {
   flex: 1;
   display: grid;
