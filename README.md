@@ -22,25 +22,42 @@ See: https://lynxjs.org/guide/start/quick-start.html
 
 ## Building the Project
 
-To build the project, follow these steps:
+First, build the lynx project:
 
-1. Run the following command to build the project:
+```bash
+bun run build
+```
 
-   ```bash
-   bun run build
-   ```
+### iOS
 
-2. Navigate to the `ios` directory and install the necessary pods:
+1. Navigate to the `ios` directory and install the necessary pods:
 
    ```bash
    cd ios
    pod install
    ```
 
-3. Open the `.xcworkspace` file in Xcode and build the project:
+2. Open the `.xcworkspace` file in Xcode and build the project:
    1. Open Xcode.
    2. Select `File` > `Open` and choose the `.xcworkspace` file.
    3. Select your target device and click the build button.
+
+### Android
+
+1. Using the command line:
+
+   ```bash
+   cd android
+   ./gradlew assembleDebug   # Build debug APK
+   # or
+   ./gradlew installDebug    # Build and install on connected device
+   ```
+
+2. Using Android Studio:
+   1. Open Android Studio
+   2. Select `File` > `Open` and choose the `android` directory
+   3. Wait for the Gradle sync to complete
+   4. Select your target device and click the Run button
 
 ## Credits
 
