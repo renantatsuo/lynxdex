@@ -23,6 +23,13 @@ export default defineConfig({
             path.join(api.context.distPath, "main.lynx.bundle"),
             path.join(api.context.rootPath, "ios/lynxdex/main.lynx.bundle")
           );
+          copyFile(
+            path.join(api.context.distPath, "main.lynx.bundle"),
+            path.join(
+              api.context.rootPath,
+              "android/app/src/main/assets/main.lynx.bundle"
+            )
+          );
         });
       },
     },
