@@ -2,6 +2,7 @@ import { defineConfig, type RsbuildPluginAPI } from "@lynx-js/rspeedy";
 
 import { pluginQRCode } from "@lynx-js/qrcode-rsbuild-plugin";
 import { pluginReactLynx } from "@lynx-js/react-rsbuild-plugin";
+import { pluginSass } from "@rsbuild/plugin-sass";
 
 import { copyFile } from "fs/promises";
 import path from "path";
@@ -15,6 +16,7 @@ export default defineConfig({
       },
     }),
     pluginReactLynx(),
+    pluginSass(),
     {
       name: "move-bundle",
       setup(api: RsbuildPluginAPI) {
@@ -34,4 +36,7 @@ export default defineConfig({
       },
     },
   ],
+  output: {
+    dataUriLimit: 50000,
+  },
 });

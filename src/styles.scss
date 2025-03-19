@@ -1,0 +1,232 @@
+:root {
+  --identity-primary: #dc0a2d;
+  --identity-secondary: #28aafd;
+  --grayscale-dark: #1c1c1c;
+  --grayscale-medium: #666666;
+  --grayscale-light: #e0e0e0;
+  --grayscale-background: #efefef;
+  --grayscale-white: #ffffff;
+  --grayscale-wireframe: #b7b7b7;
+  --pokemon-type-bug: #a7b723;
+  --pokemon-type-dark: #75574c;
+  --pokemon-type-dragon: #7037ff;
+  --pokemon-type-electric: #f9cf30;
+  --pokemon-type-fairy: #e69eac;
+  --pokemon-type-fighting: #c12239;
+  --pokemon-type-fire: #f57d31;
+  --pokemon-type-flying: #a891ec;
+  --pokemon-type-ghost: #70559b;
+  --pokemon-type-grass: #74cb48;
+  --pokemon-type-ground: #dec16b;
+  --pokemon-type-ice: #9ad6df;
+  --pokemon-type-normal: #aaa67f;
+  --pokemon-type-poison: #a43e9e;
+  --pokemon-type-psychic: #fb5584;
+  --pokemon-type-rock: #b69e31;
+  --pokemon-type-steel: #b7b9d0;
+  --pokemon-type-water: #6493eb;
+}
+
+.app-light {
+  background-color: var(--identity-primary);
+
+  text {
+    color: var(--grayscale-dark);
+  }
+}
+
+.app-dark {
+  background-color: #0f0f0f;
+
+  text {
+    color: #fff;
+  }
+}
+
+.bg {
+  &--bug {
+    background-color: var(--pokemon-type-bug);
+  }
+  &--dark {
+    background-color: var(--pokemon-type-dark);
+  }
+  &--dragon {
+    background-color: var(--pokemon-type-dragon);
+  }
+  &--electric {
+    background-color: var(--pokemon-type-electric);
+  }
+  &--fairy {
+    background-color: var(--pokemon-type-fairy);
+  }
+  &--fighting {
+    background-color: var(--pokemon-type-fighting);
+  }
+  &--fire {
+    background-color: var(--pokemon-type-fire);
+  }
+  &--flying {
+    background-color: var(--pokemon-type-flying);
+  }
+  &--ghost {
+    background-color: var(--pokemon-type-ghost);
+  }
+  &--grass {
+    background-color: var(--pokemon-type-grass);
+  }
+  &--ground {
+    background-color: var(--pokemon-type-ground);
+  }
+  &--ice {
+    background-color: var(--pokemon-type-ice);
+  }
+  &--normal {
+    background-color: var(--pokemon-type-normal);
+  }
+  &--poison {
+    background-color: var(--pokemon-type-poison);
+  }
+  &--psychic {
+    background-color: var(--pokemon-type-psychic);
+  }
+  &--rock {
+    background-color: var(--pokemon-type-rock);
+  }
+  &--steel {
+    background-color: var(--pokemon-type-steel);
+  }
+  &--water {
+    background-color: var(--pokemon-type-water);
+  }
+}
+
+.color {
+  &--identity-primary {
+    color: var(--identity-primary);
+  }
+  &--identity-secondary {
+    color: var(--identity-secondary);
+  }
+  &--grayscale-dark {
+    color: var(--grayscale-dark);
+  }
+  &--grayscale-medium {
+    color: var(--grayscale-medium);
+  }
+  &--grayscale-light {
+    color: var(--grayscale-light);
+  }
+  &--grayscale-background {
+    color: var(--grayscale-background);
+  }
+  &--grayscale-white {
+    color: var(--grayscale-white);
+  }
+  &--grayscale-wireframe {
+    color: var(--grayscale-wireframe);
+  }
+  &--bug {
+    color: var(--pokemon-type-bug);
+  }
+  &--dark {
+    color: var(--pokemon-type-dark);
+  }
+  &--dragon {
+    color: var(--pokemon-type-dragon);
+  }
+  &--electric {
+    color: var(--pokemon-type-electric);
+  }
+  &--fairy {
+    color: var(--pokemon-type-fairy);
+  }
+  &--fighting {
+    color: var(--pokemon-type-fighting);
+  }
+  &--fire {
+    color: var(--pokemon-type-fire);
+  }
+  &--flying {
+    color: var(--pokemon-type-flying);
+  }
+  &--ghost {
+    color: var(--pokemon-type-ghost);
+  }
+  &--grass {
+    color: var(--pokemon-type-grass);
+  }
+  &--ground {
+    color: var(--pokemon-type-ground);
+  }
+  &--ice {
+    color: var(--pokemon-type-ice);
+  }
+  &--normal {
+    color: var(--pokemon-type-normal);
+  }
+  &--poison {
+    color: var(--pokemon-type-poison);
+  }
+  &--psychic {
+    color: var(--pokemon-type-psychic);
+  }
+  &--rock {
+    color: var(--pokemon-type-rock);
+  }
+  &--steel {
+    color: var(--pokemon-type-steel);
+  }
+  &--water {
+    color: var(--pokemon-type-water);
+  }
+}
+
+/*text style*/
+.header-headline {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+}
+.header-subtitle-1 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 20px;
+}
+.header-subtitle-2 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+}
+.header-subtitle-3 {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+}
+.body-body-1 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 18px;
+}
+.body-body-2 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+}
+.body-body-3 {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 12px;
+}
+.body-caption {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 14px;
+}

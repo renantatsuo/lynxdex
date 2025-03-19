@@ -1,4 +1,33 @@
-type Pokemon = {
+type PokemonType =
+  | "bug"
+  | "dark"
+  | "dragon"
+  | "electric"
+  | "fairy"
+  | "fighting"
+  | "fire"
+  | "flying"
+  | "ghost"
+  | "grass"
+  | "ground"
+  | "ice"
+  | "normal"
+  | "poison"
+  | "psychic"
+  | "rock"
+  | "steel"
+  | "water";
+
+type FlavorTextEntries = {
+  flavor_text: string;
+  version: {
+    name: string;
+  };
+  language: {
+    name: string;
+  };
+};
+export type Pokemon = {
   id: number;
   name: string;
   sprites: {
@@ -8,6 +37,30 @@ type Pokemon = {
       };
     };
   };
+  types: Array<{
+    slot: number;
+    type: {
+      name: PokemonType;
+    };
+  }>;
+  flavor_text_entries: Array<FlavorTextEntries>;
+  height: number;
+  weight: number;
+  abilities: Array<{
+    ability: {
+      name: string;
+    };
+  }>;
+  stats: Array<{
+    base_stat: number;
+    stat: {
+      name: string;
+    };
+  }>;
+};
+
+type PokemonSpecies = {
+  flavor_text_entries: Array<FlavorTextEntries>;
 };
 type GetPokemonArgs = {
   limit: number;
@@ -56,12 +109,31 @@ export const getPokemonList = async (
   return response;
 };
 
+const cachePokeAPI = new Map<string, Pokemon>();
+
 export const getPokemon = async (search: number | string): Promise<Pokemon> => {
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`);
-  if (!response.ok) {
+  const cacheKey = String(search);
+  if (cachePokeAPI.has(cacheKey)) {
+    return cachePokeAPI.get(cacheKey)!;
+  }
+
+  const speciesQuery = fetch(
+    `https://pokeapi.co/api/v2/pokemon-species/${search}`
+  );
+  const pokemonQuery = fetch(`https://pokeapi.co/api/v2/pokemon/${search}`);
+  const [speciesRes, pokemonRes] = await Promise.all([
+    speciesQuery,
+    pokemonQuery,
+  ]);
+  if (!speciesRes.ok || !pokemonRes.ok) {
     throw new Error("Pokemon not found");
   }
-  return response.json();
+  const pokemon = (await pokemonRes.json()) as Pokemon;
+  const species = (await speciesRes.json()) as PokemonSpecies;
+  pokemon.flavor_text_entries = species.flavor_text_entries;
+  cachePokeAPI.set(pokemon.name, pokemon);
+  cachePokeAPI.set(String(pokemon.id), pokemon);
+  return pokemon;
 };
 
 export const transformPokemonIntoListItem = (pokemon: Pokemon) => {

@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "@lynx-js/react";
+import { useMemo, useState } from "@lynx-js/react";
 import debounce from "lodash.debounce";
+import { useNavigate } from "react-router";
 import pokeball from "~/assets/pokeball.png";
 import initialPokemonList from "~/assets/pokemon-list.json";
 import tagImg from "~/assets/tag.png";
@@ -11,9 +12,9 @@ import {
   transformPokemonIntoListItem,
   type PokemonListItem,
 } from "~/lib/pokemon";
-import "./App.css";
-
-type Theme = "light" | "dark";
+import { capitalize } from "~/lib/string";
+import { useTheme } from "~/screens/useTheme";
+import "./Home.css";
 
 const sortById = (list: PokemonListItem[]) => {
   return [...list].sort((a, b) => a.id - b.id);
@@ -23,8 +24,8 @@ const sortByName = (list: PokemonListItem[]) => {
   return [...list].sort((a, b) => a.name.localeCompare(b.name));
 };
 
-export function App() {
-  const [theme, setTheme] = useState<Theme>("light");
+export function Home() {
+  const theme = useTheme();
   const [pokemonList, setPokemonList] =
     useState<PokemonListItem[]>(initialPokemonList);
   const [displayList, setDisplayList] =
@@ -32,6 +33,7 @@ export function App() {
   const [sortBy, setSortBy] = useState<"id" | "name">("id");
   const [maxLength, setMaxLength] = useState(0);
   const [loading, setLoading] = useState(false);
+  const nav = useNavigate();
 
   const sortedList = useMemo(() => {
     if (sortBy === "id") {
@@ -42,10 +44,6 @@ export function App() {
     }
     return displayList;
   }, [displayList, sortBy]);
-
-  useEffect(() => {
-    setTheme(lynx.__globalProps.theme.toLocaleLowerCase() as Theme);
-  }, [lynx.__globalProps.theme]);
 
   const handleLoadMore = () => {
     if (loading || pokemonList.length >= maxLength) return;
@@ -124,6 +122,7 @@ export function App() {
             className="pokemon-item"
             key={`list-item-${pokemon.id}`}
             item-key={`list-item-${pokemon.id}`}
+            bindtap={() => nav(`/${pokemon.id}`)}
           >
             <view className="pokemon-item-border"></view>
             <view className="pokemon-item-background"></view>
@@ -138,7 +137,3 @@ export function App() {
     </SafeAreaView>
   );
 }
-
-const capitalize = (str: string) => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};

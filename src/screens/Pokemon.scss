@@ -1,0 +1,156 @@
+.pokemon-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pokemon-container-bg {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1/1;
+  opacity: 0.1;
+  right: 8px;
+  top: 52px;
+}
+
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.pokemon-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pokemon-header-back {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 32px;
+}
+
+.pokemon-middle-control {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.pokemon-image {
+  aspect-ratio: 1/1;
+  width: 200px;
+}
+
+.pokemon-attributes {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  z-index: 0;
+  margin: 0 16px;
+  background-color: var(--grayscale-white);
+  border-radius: 8px;
+  padding: 20px;
+  padding-top: 56px;
+  margin-top: -48px;
+  align-items: center;
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.pokemon-type {
+  color: var(--grayscale-white);
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  padding: 2px 12px;
+  border-radius: 16px;
+}
+
+.pokemon-about {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.pokemon-about-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+
+  image {
+    aspect-ratio: 1/1;
+    width: 20px;
+  }
+
+  view {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  .body-caption {
+    margin: 0 auto;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: var(--grayscale-light);
+}
+
+.pokemon-flavor-text {
+  width: 100%;
+  margin: 16px 0;
+  text {
+    text-align: justify;
+  }
+}
+
+.pokemon-stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pokemon-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pokemon-stat-name {
+  width: 32px;
+  text-align: right;
+}
+
+.pokemon-stat-bar {
+  flex: 1;
+  height: 4px;
+  display: relative;
+  border-radius: 8px;
+}
+
+.pokemon-stat-bar-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  border-radius: 8px;
+}
+
+.pokemon-stat-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+}
