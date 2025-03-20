@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B3D3A8B2475A49B57C81255 /* libPods-lynxdex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 930A2C95EE8BD15A6D59969F /* libPods-lynxdex.a */; };
+		751348822D8C51640044A21E /* MediaFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751348812D8C515E0044A21E /* MediaFetcher.swift */; };
+		751348922D8C5BA60044A21E /* static in Resources */ = {isa = PBXBuildFile; fileRef = 751348912D8C5BA60044A21E /* static */; };
 		751D437F2D81B00A0002BBF8 /* main.lynx.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 751D437E2D81B00A0002BBF8 /* main.lynx.bundle */; };
 		754E63792D81AA49006D8762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E636F2D81AA49006D8762 /* AppDelegate.swift */; };
 		754E637A2D81AA49006D8762 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754E63762D81AA49006D8762 /* SceneDelegate.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		179E483F670C71EA16779439 /* Pods-lynxdex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lynxdex.release.xcconfig"; path = "Target Support Files/Pods-lynxdex/Pods-lynxdex.release.xcconfig"; sourceTree = "<group>"; };
+		751348812D8C515E0044A21E /* MediaFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFetcher.swift; sourceTree = "<group>"; };
+		751348912D8C5BA60044A21E /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; name = static; path = lynxdex/static; sourceTree = "<group>"; };
 		751D437E2D81B00A0002BBF8 /* main.lynx.bundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.lynx.bundle; sourceTree = "<group>"; };
 		754E63472D81AA0B006D8762 /* lynxdex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lynxdex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		754E636F2D81AA49006D8762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +39,30 @@
 		D442FEB21F6052358C496471 /* Pods-lynxdex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lynxdex.debug.xcconfig"; path = "Target Support Files/Pods-lynxdex/Pods-lynxdex.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		751348932D8C5BA90044A21E /* Exceptions for "static" folder in "lynxdex" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"image/arrow-back.0e0332d1.png",
+				image/height.3b7bf1ae.png,
+				image/pokeball.552dcd06.png,
+				image/tag.03852748.png,
+				"image/text-format.565c95ae.png",
+				image/weight.5231f7bd.png,
+			);
+			target = 754E63462D81AA0B006D8762 /* lynxdex */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		7513488A2D8C5B480044A21E /* static */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				751348932D8C5BA90044A21E /* Exceptions for "static" folder in "lynxdex" target */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
 		75D7BC1A2D823F3D00499C4C /* utils */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = utils;
@@ -63,6 +90,7 @@
 		754E633E2D81AA0B006D8762 = {
 			isa = PBXGroup;
 			children = (
+				751348912D8C5BA60044A21E /* static */,
 				754E63782D81AA49006D8762 /* lynxdex */,
 				754E63482D81AA0B006D8762 /* Products */,
 				BF34FE9C85D90E00147BB6A0 /* Pods */,
@@ -86,10 +114,12 @@
 				754E636F2D81AA49006D8762 /* AppDelegate.swift */,
 				754E63702D81AA49006D8762 /* Assets.xcassets */,
 				754E63712D81AA49006D8762 /* Info.plist */,
+				7513488A2D8C5B480044A21E /* static */,
 				751D437E2D81B00A0002BBF8 /* main.lynx.bundle */,
 				754E63732D81AA49006D8762 /* LaunchScreen.storyboard */,
 				754E63752D81AA49006D8762 /* Main.storyboard */,
 				754E63762D81AA49006D8762 /* SceneDelegate.swift */,
+				751348812D8C515E0044A21E /* MediaFetcher.swift */,
 				754E63812D81AB79006D8762 /* LynxProvider.swift */,
 				754E63802D81AAFA006D8762 /* lynxdex-Bridging-Header.h */,
 				754E63772D81AA49006D8762 /* ViewController.swift */,
@@ -132,6 +162,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				7513488A2D8C5B480044A21E /* static */,
 				75D7BC1A2D823F3D00499C4C /* utils */,
 				75D7BC202D823F7000499C4C /* input */,
 			);
@@ -179,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751348922D8C5BA60044A21E /* static in Resources */,
 				754E637C2D81AA49006D8762 /* Assets.xcassets in Resources */,
 				754E637E2D81AA49006D8762 /* LaunchScreen.storyboard in Resources */,
 				751D437F2D81B00A0002BBF8 /* main.lynx.bundle in Resources */,
@@ -239,6 +271,7 @@
 				754E637A2D81AA49006D8762 /* SceneDelegate.swift in Sources */,
 				754E637B2D81AA49006D8762 /* ViewController.swift in Sources */,
 				754E63822D81AB7E006D8762 /* LynxProvider.swift in Sources */,
+				751348822D8C51640044A21E /* MediaFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

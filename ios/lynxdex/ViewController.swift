@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
         lynxView = LynxView { builder in
             builder.config = LynxConfig(provider: LynxProvider())
+            builder.enableGenericResourceFetcher = LynxBooleanOption.true
+            builder.mediaResourceFetcher = MediaFetcher()
             builder.screenSize = self.view.frame.size
             builder.fontScale = 1.0
         }
