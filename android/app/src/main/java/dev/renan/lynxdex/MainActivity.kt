@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
+import com.lynx.tasm.LynxBooleanOption
 import com.lynx.tasm.LynxView
 import com.lynx.tasm.LynxViewBuilder
 import com.lynx.tasm.behavior.Behavior
@@ -40,6 +41,8 @@ class MainActivity : Activity() {
             }
         })
         viewBuilder.setTemplateProvider(TemplateProvider(this))
+        viewBuilder.setEnableGenericResourceFetcher(LynxBooleanOption.TRUE)
+        viewBuilder.setMediaResourceFetcher(MediaFetcher())
         return viewBuilder.build(this)
     }
 }
