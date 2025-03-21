@@ -1,6 +1,7 @@
 package dev.renan.lynxdex
 
 import android.app.Activity
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
@@ -29,6 +30,16 @@ class MainActivity : Activity() {
             lynxView.updateGlobalProps(globalProps)
             return@setOnApplyWindowInsetsListener insets
         }
+
+        var theme = "light"
+        var uiMode = this.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK;
+        if (uiMode ==  Configuration.UI_MODE_NIGHT_YES) {
+            theme = "dark"
+        }
+        val globalProps = HashMap<String, Any>()
+        globalProps["theme"] = theme;
+        lynxView.updateGlobalProps(globalProps)
+
         setContentView(lynxView)
     }
 

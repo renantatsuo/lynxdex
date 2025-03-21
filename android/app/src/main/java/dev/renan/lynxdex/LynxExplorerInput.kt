@@ -7,6 +7,7 @@ import android.view.Gravity
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import androidx.appcompat.widget.AppCompatEditText
 import com.lynx.react.bridge.Callback
 import com.lynx.react.bridge.ReadableMap
@@ -17,10 +18,10 @@ import com.lynx.tasm.behavior.LynxUIMethodConstants
 import com.lynx.tasm.behavior.ui.LynxUI
 import com.lynx.tasm.event.LynxCustomEvent
 
-class LynxExplorerInput(context: LynxContext) : LynxUI<AppCompatEditText>(context) {
+class LynxExplorerInput(context: LynxContext) : LynxUI<EditText>(context) {
 
-    override fun createView(context: Context): AppCompatEditText {
-        return AppCompatEditText(context).apply {
+    override fun createView(context: Context): EditText {
+        return EditText(context).apply {
             setLines(1)
             setSingleLine()
             gravity = Gravity.CENTER_VERTICAL
